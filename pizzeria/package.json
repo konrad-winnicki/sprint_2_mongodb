@@ -1,0 +1,14 @@
+{
+  "name": "pizzeria",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Konrad Winnicki",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "5.6"
+  }
+}
