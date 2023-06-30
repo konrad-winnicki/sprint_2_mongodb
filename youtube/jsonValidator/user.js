@@ -1,3 +1,4 @@
+
 const user = {
   validator: {
     $jsonSchema: {
@@ -196,8 +197,14 @@ const user = {
           items: {
             bsonType: "object",
             description: "Require an object",
-            required: ["name", "date"],
+            required: ["_id", "name", "date"],
             properties: {
+              _id:{
+                
+                  bsonType: "objectId",
+                  description: "Require an objectId"
+                
+              },
               name: {
                 bsonType: "string",
                 description: "Requiere a string",

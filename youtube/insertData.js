@@ -1,3 +1,6 @@
+const { ObjectId } = require("mongodb")
+
+
 const usersInsert = [
   {
     _id: 1,
@@ -77,6 +80,7 @@ const usersInsert = [
     ],
     channels: [
       {
+        _id: new ObjectId(),
         name: "Channel 1",
         date: new Date("2023-06-22T21:00:00Z"),
         channelDescription: "Channel 1 description",
@@ -190,6 +194,7 @@ const usersInsert = [
     ],
     channels: [
       {
+        _id: new ObjectId(),
         name: "Channel 2",
         date: new Date("2023-06-23T10:30:00Z"),
         channelDescription: "Channel 2 description",
@@ -335,7 +340,8 @@ const usersInsert = [
     ],
     channels: [
       {
-        name: "Channel 2",
+        _id: new ObjectId(),
+        name: "Channel 3",
         date: new Date("2023-06-23T10:30:00Z"),
         channelDescription: "Channel 2 description",
         subscribers: [
@@ -690,6 +696,196 @@ const videosInsert = [
 
 
 const commentsInsert = [
+  {
+    commentId: 1,
+    videoId: 1,
+    commentSenderId: 2,
+    date: new Date(),
+    text: "Comment 1",
+    reactions: [
+      {
+        date: new Date(),
+        userId: 2,
+        reactionType: "like",
+      },
+      {
+        date: new Date("2023-06-22T21:00:00Z"),
+        userId: 3,
+        reactionType: "dislike",
+      },
+    ],
+  },
+  {
+    commentId: 2,
+    videoId: 1,
+    commentSenderId: 3,
+    date: new Date("2023-06-22T21:00:00Z"),
+    text: "Comment 2",
+    reactions: [
+      {
+        date: new Date("2023-06-22T21:00:00Z"),
+        userId: 2,
+        reactionType: "like",
+      },
+      {
+        date: new Date("2023-06-22T21:00:00Z"),
+        userId: 3,
+        reactionType: "like",
+      },
+    ],
+  },
+  {
+    commentId: 3,
+    videoId: 2,
+    commentSenderId: 1,
+    date: new Date("2023-06-23T10:30:00Z"),
+    text: "Comment 3",
+    reactions: [
+      {
+        date: new Date("2023-06-23T10:30:00Z"),
+        userId: 1,
+        reactionType: "like",
+      },
+      {
+        date: new Date("2023-06-23T10:30:00Z"),
+        userId: 3,
+        reactionType: "dislike",
+      },
+    ],
+  },
+  {
+    commentId: 4,
+    videoId: 2,
+    commentSenderId: 1,
+    date: new Date("2023-06-23T10:30:00Z"),
+    text: "Comment 4",
+    reactions: [
+      {
+        date: new Date("2023-06-23T10:30:00Z"),
+        userId: 3,
+        reactionType: "like",
+      },
+      {
+        date: new Date("2023-06-23T10:30:00Z"),
+        userId: 2,
+        reactionType: "like",
+      },
+    ],
+  },
+  {
+    commentId: 5,
+    videoId: 3,
+    commentSenderId: 1,
+    date: new Date("2023-06-23T10:30:00Z"),
+    text: "Comment 5",
+    reactions: [
+      {
+        date: new Date("2023-06-23T10:30:00Z"),
+        userId: 2,
+        reactionType: "like",
+      },
+      {
+        date: new Date("2023-06-23T10:30:00Z"),
+        userId: 3,
+        reactionType: "dislike",
+      },
+    ],
+  },
+  {
+    commentId: 6,
+    videoId: 3,
+    commentSenderId: 2,
+    date: new Date("2023-06-23T10:30:00Z"),
+    text: "Comment 6",
+    reactions: [
+      {
+        date: new Date("2023-06-23T10:30:00Z"),
+        userId: 1,
+        reactionType: "like",
+      },
+      {
+        date: new Date("2023-06-23T10:30:00Z"),
+        userId: 3,
+        reactionType: "like",
+      },
+    ],
+  },
+  {
+    commentId: 7,
+    videoId: 3,
+    commentSenderId: 2,
+    date: new Date("2023-06-23T10:30:00Z"),
+    text: "Comment 7",
+    reactions: [
+      {
+        date: new Date("2023-06-23T10:30:00Z"),
+        userId: 1,
+        reactionType: "like",
+      },
+      {
+        date: new Date("2023-06-23T10:30:00Z"),
+        userId: 3,
+        reactionType: "dislike",
+      },
+    ],
+  },
+  {
+    commentId: 8,
+    videoId: 5,
+    commentSenderId: 1,
+    date: new Date("2023-06-23T10:30:00Z"),
+    text: "Comment 8",
+    reactions: [
+      {
+        date: new Date("2023-06-23T10:30:00Z"),
+        userId: 2,
+        reactionType: "like",
+      },
+      {
+        date: new Date("2023-06-23T10:30:00Z"),
+        userId: 3,
+        reactionType: "dislike",
+      },
+    ],
+  },
+  {
+    commentId: 9,
+    videoId: 5,
+    commentSenderId: 2,
+    date: new Date("2023-06-23T10:30:00Z"),
+    text: "Comment 9",
+    reactions: [
+      {
+        date: new Date("2023-06-23T10:30:00Z"),
+        userId: 1,
+        reactionType: "like",
+      },
+      {
+        date: new Date("2023-06-23T10:30:00Z"),
+        userId: 3,
+        reactionType: "like",
+      },
+    ],
+  },
+  {
+    commentId: 10,
+    videoId: 5,
+    commentSenderId: 2,
+    date: new Date("2023-06-23T10:30:00Z"),
+    text: "Comment 7",
+    reactions: [
+      {
+        date: new Date("2023-06-23T10:30:00Z"),
+        userId: 1,
+        reactionType: "like",
+      },
+      {
+        date: new Date("2023-06-23T10:30:00Z"),
+        userId: 3,
+        reactionType: "dislike",
+      },
+    ],
+  },
 
     {
       commentId: 11,
