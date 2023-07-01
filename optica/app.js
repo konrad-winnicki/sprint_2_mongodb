@@ -1,5 +1,5 @@
 const { MongoClient } = require("mongodb");
-const { opticaSales } = require("./jsonValidator.js/opticaSales");
+const { opticaSales } = require("./jsonValidator/opticaSales");
 const { opticaSalesInsert } = require("./insertData");
 
 const uri = "mongodb://127.0.0.1:27017";
@@ -22,6 +22,7 @@ async function createCollection() {
 }
 
 async function insertData() {
+  const client = new MongoClient(uri);
   try {
     const database = client.db("optica");
     try {

@@ -1,13 +1,13 @@
 const { MongoClient } = require("mongodb");
 const {
   restaurants,
-} = require("./jsonValidators/restaurants");
+} = require("./jsonValidator/restaurants");
 const {
   products,
-} = require("./jsonValidators/products");
+} = require("./jsonValidator/products");
 const {
   categories,
-} = require("./jsonValidators/categories");
+} = require("./jsonValidator/categories");
 const {categoriesInsert, productsInsert, restaurantsInsert} = require('./insertData')
 
 
